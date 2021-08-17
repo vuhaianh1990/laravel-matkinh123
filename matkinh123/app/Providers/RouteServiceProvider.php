@@ -24,35 +24,8 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
-    }
-
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        /**
-         * @var Router $router
-         */
-        // $router = $this->app['router'];
-
-        // $router->pushMiddlewareToGroup('web', Locale::class);
-    }
-
-    /**
-     * Define the routes for the application.
-     *
-     * @return void
-     */
-    public function map()
-    {
         $this->mapApiRoutes();
-
         $this->mapWebRoutes();
-
-        //
     }
 
     /**
@@ -64,6 +37,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+        // $this->loadRoutesFrom(base_path('matkinh123/routes/web.php'));
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('matkinh123/routes/web.php'));
@@ -78,6 +52,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
+        // $this->loadRoutesFrom(base_path('matkinh123/routes/api.php'));
         Route::prefix('api')
              ->middleware('api')
              ->namespace($this->namespace)

@@ -35,7 +35,7 @@ if (! function_exists('admin_view')) {
           return $factory;
       }
 
-      $admin_view = env('VIEW_CORE') . 'admin.' . env('ADMIN_THEME') . '.pages.' . $view;
+      $admin_view = env('VIEW_CORE'). '::' . 'admin.' . env('ADMIN_THEME') . '.pages.' . $view;
 
       return $factory->make($admin_view, $data, $mergeData);
   }
@@ -43,7 +43,7 @@ if (! function_exists('admin_view')) {
 
 if (! function_exists('admin_theme')) {
   function admin_theme() {
-    return env('VIEW_CORE') . 'admin.' . env('ADMIN_THEME') . '.';
+    return env('VIEW_CORE'). '::' . 'admin.' . env('ADMIN_THEME') . '.';
   }
 }
 

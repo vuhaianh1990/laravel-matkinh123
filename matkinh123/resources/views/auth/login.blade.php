@@ -1,4 +1,4 @@
-@extends(env('VIEW_CORE') . 'layouts.app')
+@extends(env('VIEW_CORE') . '::' . 'layouts.app')
 
 @section('content')
 <div class="container">

@@ -42,10 +42,10 @@ class LoginController extends Controller
         return view('matkinh123::auth.login');
     }
 
-    public function username()
-    {
-        return 'username';
-    }
+    // public function username()
+    // {
+    //     return 'username';
+    // }
 
     /*public function authenticated(Request $request)
     {
